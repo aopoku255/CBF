@@ -29,6 +29,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./_variables.scss">
+  <link rel="stylesheet" href="./_navs.scss">
 
 </head>
 
@@ -233,6 +235,30 @@
 
       </div>
     </section><!-- End Team Section -->
+
+    <section>
+        <div class="container">
+            <ul class="nav nav-tabs nav-tabs-custom nav-success nav-justified mb-3" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Exhibitor/Partner/Sponsor</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Press/Industry Analyst
+                </button>
+                </li>
+                <!-- <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+                </li> -->
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <p>If you are an exhibitor, partner or sponsor <a href="./sponsors.html">click here</a> to access the CARISCA Business Forum Exhibitor & Partner Registration System.</p>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                <!-- <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div> -->
+              </div>
+        </div>
+    </section>
 
 
     
