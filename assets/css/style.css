@@ -1933,3 +1933,24 @@ section {
 }
 }
 
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  /* color: #f3f3f3; */
+  background-color: white;
+  border-color: transparent transparent #f3f3f3;
+  border-top: 4px solid dodgerblue !important;
+  color: #3c3c3c;
+}
+.nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-size: 20px;
+  color: #3c3c3c;
+}
+.nav-tabs:hover .nav-link:hover {
+  border: none;
+}
+
