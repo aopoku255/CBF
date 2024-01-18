@@ -118,12 +118,14 @@
           <p class="fw-light">Send us your details and we’ll show you options that best fit your goals.</p>
         </div>
 
-        <form action="https://formspree.io/f/mgegvqka" method="POST" class="w-lg-50 mx-auto p-5 border">
+        <!-- https://formspree.io/f/mgegvqka -->
+        <p class="text-danger text-center" id="errormsg"></p>
+        <form action="" method="POST" class="w-lg-50 mx-auto p-5 border">
           <div class="row">
             <div class="col-lg-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">Prefix(Optional)</label>
-                <select name="prefix" id="" class="form-control rounded-0 py-2 px-3 mt-2">
+                <select name="prefix" id="prefix" class="form-control rounded-0 py-2 px-3 mt-2">
                     <option value="" class="disable">---Please select---</option>
                     <option value="Miss.">Miss.</option>
                     <option value="Ms.">Ms.</option>
@@ -141,37 +143,37 @@
             <div class="col-lg-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">First Name<span class="text-danger opacity-75">*</span></label>
-                <input type="text" name="first_name" id="" class="py-2 px-3 mt-2 form-control rounded-0" required>
+                <input type="text" name="first_name" id="first_name" class="py-2 px-3 mt-2 form-control rounded-0" required>
               </div>
             </div>
             <div class="col-lg-4 mt-lg-0 mt-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">Last Name<span class="text-danger opacity-75">*</span></label>
-                <input type="text" name="last_name" id="" class="py-2 px-3 mt-2 form-control rounded-0" required>
+                <input type="text" name="last_name" id="last_name" class="py-2 px-3 mt-2 form-control rounded-0" required>
               </div>
             </div>
             <div class="col-lg-4 mt-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">Email Address<span class="text-danger opacity-75">*</span></label>
-                <input type="email" name="email" id="" class="py-2 px-3 mt-2 form-control rounded-0" required>
+                <input type="email" name="email" id="email" class="py-2 px-3 mt-2 form-control rounded-0" required>
               </div>
             </div>
             <div class="col-lg-4 mt-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">Phone Number(Optional)</label>
-                <input type="text" name="phone_number" id="" class="py-2 px-3 mt-2 form-control rounded-0" required>
+                <input type="text" name="mobile_number" id="mobile_number" class="py-2 px-3 mt-2 form-control rounded-0" required>
               </div>
             </div>
             <div class="col-lg-4 mt-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">Organization/University<span class="text-danger opacity-75">*</span></label>
-                <input type="text" name="organization" id="" class="py-2 px-3 mt-2 form-control rounded-0" required>
+                <input type="text" name="organization" id="organization" class="py-2 px-3 mt-2 form-control rounded-0" required>
               </div>
             </div>
             <div class="col-lg-6 mt-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">Continent<span class="text-danger opacity-75">*</span></label>
-                <select name="continent" id="" class="form-control rounded-0 py-2 px-3 mt-2">
+                <select name="continent" id="continent" class="form-control rounded-0 py-2 px-3 mt-2">
                     <option value="" class="disable">---Please select---</option>
                     <option value="Africa">Africa</option>
                     <option value="Asia">Asia</option>
@@ -187,13 +189,13 @@
             <div class="col-lg-6 mt-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">Country<span class="text-danger opacity-75">*</span></label>
-                <input type="text" name="country" id="" class="py-2 px-3 mt-2 form-control rounded-0" required>
+                <input type="text" name="country" id="country" class="py-2 px-3 mt-2 form-control rounded-0" required>
               </div>
             </div>
             <div class="col-lg-6 mt-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">Sector<span class="text-danger opacity-75">*</span></label>
-                <select name="sector" id="" class="form-control rounded-0 py-2 px-3 mt-2">
+                <select name="sector" id="sector" class="form-control rounded-0 py-2 px-3 mt-2">
                     <option value="" class="disable">---Please select---</option>
                     <option value="Agriculture">Agriculture</option>
                     <option value="Business">Business</option>
@@ -208,7 +210,7 @@
             <div class="col-lg-6 mt-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">Role<span class="text-danger opacity-75">*</span></label>
-                <select name="role" id="" class="form-control rounded-0 py-2 px-3 mt-2">
+                <select name="role" id="role" class="form-control rounded-0 py-2 px-3 mt-2">
                     <option value="" class="disable">---Please select---</option>
                     <option value="Agriculture/agribusiness worker">Agriculture/agribusiness worker</option>
                     <option value="Faculty">Faculty</option>
@@ -226,7 +228,7 @@
            
             <div class="d-flex justify-content-center">
 
-              <button type="submit" class="mx-auto text-white btn btn-primary rounded-0 px-5 py-3 w-lg-0" style="">SUBMIT</button>
+              <button type="button" id="submit" class="mx-auto text-white btn btn-primary rounded-0 px-5 py-3 w-lg-0" style="">SUBMIT</button>
             </div>
           </div>
           </div>
@@ -354,6 +356,7 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
+  <script src="assets/js/register.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
