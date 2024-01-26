@@ -11,10 +11,36 @@ const continent = document.getElementById("continent");
 const mobile_number = document.getElementById("mobile_number");
 const country = document.getElementById("country");
 const role = document.getElementById("role");
+const sector = document.getElementById("sector");
+const specify_sector = document.getElementById("specify_sector");
+const specify_role = document.getElementById("specify_role");
 // const comment = document.getElementById("comment");
 const submitBtn = document.getElementById("submit");
 
 // ADD EVENT LISTENER
+
+function handleSectorChange(e) {
+  const mysector = sector.value;
+  if (mysector === "Other") {
+    specify_sector.classList.remove("d-none");
+  } else {
+    specify_sector.classList.add("d-none");
+  }
+}
+
+function handleRoleChange(e) {
+  const myrole = role.value;
+  console.log(myrole);
+  if (myrole === "Other") {
+    specify_role.classList.remove("d-none");
+  } else {
+    specify_role.classList.add("d-none");
+  }
+}
+
+// HANDLE CHANGE
+sector.addEventListener("change", handleSectorChange);
+role.addEventListener("change", handleRoleChange);
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -27,7 +53,7 @@ function handleSubmit(e) {
   const mobile_number_value = mobile_number.value;
   const country_value = country.value;
   const role_value = role.value;
-// //   const comment_value = comment.value;
+  // //   const comment_value = comment.value;
 
   if (
     !first_name_value ||
@@ -45,7 +71,7 @@ function handleSubmit(e) {
     setTimeout(() => {
       errormsg.innerHTML = "";
     }, 3000);
-    return
+    return;
   }
 
   console.log({
@@ -60,7 +86,7 @@ function handleSubmit(e) {
     role_value,
     // comment_value,
   });
-  window.location.href = "/thanks.html"
+  window.location.href = "/thanks.html";
 }
 
 submitBtn.addEventListener("click", handleSubmit);
