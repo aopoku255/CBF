@@ -36,7 +36,6 @@ function handleSubmit(e) {
     !email_value ||
     !company_name_value ||
     !industry_value ||
-    !mobile_number_value ||
     !country_value ||
     !enquiry_value
   ) {
@@ -64,3 +63,5 @@ function handleSubmit(e) {
 }
 
 submitBtn.addEventListener("click", handleSubmit);
+
+

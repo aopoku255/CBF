@@ -1,4 +1,6 @@
+import countries from "./country";
 // SPONSORS FORM SECTION
+
 
 // CAPTURE FORM FIELDS
 const errormsg = document.getElementById("errormsg");
@@ -62,7 +64,6 @@ function handleSubmit(e) {
     !email_value ||
     !organization_value ||
     !continent_value ||
-    !mobile_number_value ||
     !country_value ||
     !role_value
   ) {
@@ -90,3 +91,8 @@ function handleSubmit(e) {
 }
 
 submitBtn.addEventListener("click", handleSubmit);
+
+countries.map(countr => {
+  
+})
+
