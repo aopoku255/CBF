@@ -1,4 +1,4 @@
-const countries = [
+export const countries = [
   {
     id: 1,
     countryName: "Ascension Island",
@@ -1275,5 +1275,3 @@ const countries = [
     countryCode: "+263",
   },
 ];
-
-export default countries;

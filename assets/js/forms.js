@@ -64,4 +64,3 @@ function handleSubmit(e) {
 
 submitBtn.addEventListener("click", handleSubmit);
 
-

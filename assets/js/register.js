@@ -1,6 +1,4 @@
-import countries from "./country";
 // SPONSORS FORM SECTION
-
 
 // CAPTURE FORM FIELDS
 const errormsg = document.getElementById("errormsg");
@@ -75,24 +73,7 @@ function handleSubmit(e) {
     return;
   }
 
-  console.log({
-    first_name_value,
-    last_name_value,
-    prefix_value,
-    email_value,
-    organization_value,
-    continent_value,
-    mobile_number_value,
-    country_value,
-    role_value,
-    // comment_value,
-  });
   window.location.href = "/thanks.html";
 }
 
 submitBtn.addEventListener("click", handleSubmit);
-
-countries.map(countr => {
-  
-})
-
