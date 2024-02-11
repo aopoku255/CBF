@@ -77,3 +77,16 @@ function handleSubmit(e) {
 }
 
 submitBtn.addEventListener("click", handleSubmit);
+
+import { countries } from "./country.mjs";
+
+countries
+  .sort((a, b) => a - b)
+  .map((c) => {
+    const options = document.createElement("option");
+    options.value = c.countryName;
+    options.text = c.countryName;
+    country.append(options);
+  });
+
+console.log(countries);
