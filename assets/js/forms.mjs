@@ -16,7 +16,7 @@ const submitBtn = document.getElementById("submit");
 
 // ADD EVENT LISTENER
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
   const first_name_value = first_name.value;
   const last_name_value = last_name.value;
@@ -46,27 +46,32 @@ function handleSubmit(e) {
     }, 3000);
     return;
   } else {
-    console.log({
-      first_name_value,
-      last_name_value,
-      job_title_value,
-      email_value,
-      company_name_value,
-      industry_value,
-      mobile_number_value,
-      country_value,
-      enquiry_value,
-      comment_value,
+    const response = await axios.post("http://localhost:3001/api/v1/sponsors", {
+      first_name: first_name_value,
+      last_name: last_name_value,
+      job_title: job_title_value,
+      email: email_value,
+      company_name: company_name_value,
+      industry: industry_value,
+      mobile_number: mobile_number_value,
+      country: country_value,
+      enquiry: enquiry_value,
+      comment: comment_value,
     });
-    window.location.href = "/thanks.html";
+    if (response?.data?.status === "success") {
+      window.location.href = "/thanks.html";
+    } else {
+      errormsg.innerHTML = response?.data?.data;
+      setTimeout(() => {
+        errormsg.innerHTML = "";
+      }, 3000);
+    }
   }
 }
 
 submitBtn.addEventListener("click", handleSubmit);
 
 import { countries } from "./country.mjs";
-
-console.log(countries);
 
 countries
   .sort((a, b) => a - b)

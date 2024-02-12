@@ -42,7 +42,7 @@ function handleRoleChange(e) {
 sector.addEventListener("change", handleSectorChange);
 role.addEventListener("change", handleRoleChange);
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
   const first_name_value = first_name.value;
   const last_name_value = last_name.value;
@@ -53,6 +53,7 @@ function handleSubmit(e) {
   const mobile_number_value = mobile_number.value;
   const country_value = country.value;
   const role_value = role.value;
+  const sector_value = sector.value;
   // //   const comment_value = comment.value;
 
   if (
@@ -71,9 +72,30 @@ function handleSubmit(e) {
       errormsg.innerHTML = "";
     }, 3000);
     return;
-  }
+  } else {
+    const response = await axios.post("http://localhost:3001/api/v1/register", {
+      prefix: prefix_value,
+      first_name: first_name_value,
+      last_name: last_name_value,
+      email: email_value,
+      organization: organization_value,
+      continent: continent_value,
+      mobile_number: mobile_number_value,
+      country: country_value,
+      role: role_value,
+      sector: sector_value,
+    });
 
-  window.location.href = "/thanks.html";
+    if (response?.data?.status === "success") {
+      window.location.href = "/thanks.html";
+    } else {
+      errormsg.innerHTML = response?.data?.data;
+      setTimeout(() => {
+        errormsg.innerHTML = "";
+      }, 3000);
+    }
+    // window.location.href = "/thanks.html";
+  }
 }
 
 submitBtn.addEventListener("click", handleSubmit);
@@ -88,5 +110,3 @@ countries
     options.text = c.countryName;
     country.append(options);
   });
-
-console.log(countries);
