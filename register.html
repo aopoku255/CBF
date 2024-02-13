@@ -62,17 +62,16 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="./index.html">HOME</a></li>
-          <li><a class="nav-link scrollto" href="./index.html#about">ABOUT</a></li>
+          <!-- <li><a class="nav-link scrollto" href="./index.html#about">ABOUT</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="./index.html#services">Services</a></li> -->
           <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
-          <li class="dropdown"><a href="#"><span>FORUM</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a href="./program.html">PROGRAM</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>FORUM</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="./program.html">PROGRAM</a></li>
               <li><a href="./speakers.html">SPEAKERS</a></li>
-              <!-- <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li> -->
+           
             </ul>
-          </li>
+          </li> -->
         
           <li><a class="nav-link scrollto btn btn-primary text-white px-lg-4 px-2 py-2 mx-lg-0 mx-3" href="./sponsors.html" style="background-color: rgb(15, 59, 143);">EXHIBIT</a></li>
           <li><a class="btn btn-danger text-white px-lg-4 px-2 py-2 mx-lg-0 mx-3 mt-md-0 mt-3" href="./register.html">REGISTER TO ATTEND</a></li>
@@ -113,14 +112,14 @@
     <section id="sponsor" class="team text-white" style="background-color: #090329;">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-title text-center w-75 mx-auto">
           <!-- <h2>Register</h2> -->
-          <h3 class="">Registration for the <span>FORUM is absolutely FREE!</span> To secure your spot, simply register below</h3>
+          <h3 class="fs-4 ">Please register below to attend the forum. There is no charge for participants who are not exhibiting.</h3>
           <!-- <p class="fw-light">Send us your details and we’ll show you options that best fit your goals.</p> -->
         </div>
 
         <!-- https://formspree.io/f/mgegvqka -->
-        <p class="text-danger text-center" id="errormsg"></p>
+        <p class="text-danger text-center fixed-bottom" id="errormsg"></p>
         <form action="" method="POST" class="w-lg-50 mx-auto p-5">
           <div class="row">
             <div class="col-lg-4">
@@ -190,7 +189,9 @@
             <div class="col-lg-6 mt-4">
               <div class="d-flex flex-column">
                 <label for="" class="fw-bold">Country<span class="text-danger opacity-75">*</span></label>
-                <input type="text" name="country" id="country" class="py-2 px-3 mt-2 form-control rounded-0" required>
+                <select name="country" id="country" class="form-control rounded-0 py-2 px-3 mt-2">
+                  <option value="" class="disable">---Please select---</option>
+                </select>
               </div>
             </div>
             <div class="col-lg-6 mt-4">
@@ -213,28 +214,42 @@
                 <label for="" class="fw-bold">Role<span class="text-danger opacity-75">*</span></label>
                 <select name="role" id="role" class="form-control rounded-0 py-2 px-3 mt-2">
                     <option value="" class="disable">---Please select---</option>
-                    <option value="Agriculture/agribusiness worker">Entrepreneur/Startup Owner
+                    <option value="Entrepreneur/Startup Owner">Entrepreneur/Startup Owner
                     </option>
-                    <option value="Faculty">Chairman/ CEO/President
+                    <option value="Chairman/ CEO/President">Chairman/ CEO/President
                     </option>
-                    <option value="Farmer">Manager/Supervisor
+                    <option value="Manager/Supervisor">Manager/Supervisor
                     </option>
-                    <option value="Healthcare practitioner">Sales and Marketing Executive
+                    <option value="Sales and Marketing Executive">Sales and Marketing Executive
                     </option>
-                    <option value="Staff">Media Representative/Personality 
+                    <option value="Media Representative/Personality">Media Representative/Personality 
                     </option>
-                    <option value="Student">Professor/Academic/Educator
+                    <option value="Professor/Academic/Educator">Professor/Academic/Educator
                     </option>
-                    <option value="Supply chain professional">Government Representative/Public Sector Staff 
+                    <option value="Government Representative/Public Sector Staff">Government Representative/Public Sector Staff 
                     </option>
-                    <option value="Supply chain professional">Non-Profit/NGO 
+                    <option value="Non-Profit/NGO">Non-Profit/NGO 
  
                     </option>
-                    <option value="Supply chain professional">Student 
+                    <option value="Student">Student 
                     </option>
-                    <option value="Supply chain professional">Other, specify 
+                    <option value="Other">Other 
                     </option>
                   </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mt-4 d-none" id="specify_sector" data-aos="fade-up">
+              <div class="d-flex flex-column">
+                <label for="" class="fw-bold">Specify Sector<span class="text-danger opacity-75">*</span></label>
+                <input type="text" name="specify_sector" id="specify_sector" class="py-2 px-3 mt-2 form-control rounded-0" required>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mt-4 d-none" id="specify_role" data-aos="fade-up">
+              <div class="d-flex flex-column">
+                <label for="" class="fw-bold">Specify Role<span class="text-danger opacity-75">*</span></label>
+                <input type="text" name="specify_role" id="specify_role" class="py-2 px-3 mt-2 form-control rounded-0" required>
               </div>
             </div>
           
@@ -243,7 +258,7 @@
            
             <div class="d-flex justify-content-center">
 
-              <button type="button" id="submit" class="mx-auto text-white btn btn-primary rounded-0 px-5 py-3 w-lg-0" style="">SUBMIT</button>
+              <button type="button" id="submit" class="mx-auto text-white btn btn-primary rounded-0 px-5 py-3 w-lg-0" style="">REGISTER</button>
             </div>
           </div>
           </div>
@@ -291,7 +306,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-              <h3>CARISCA<span>.</span></h3>
+              <h3>CARISCA<span></span></h3>
               <p>
               KNUST School of Business
 
@@ -362,7 +377,8 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/register.js"></script>
+  <script type="module" src="assets/js/register.mjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
