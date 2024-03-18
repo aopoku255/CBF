@@ -62,20 +62,21 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="./index.html">HOME</a></li>
-          <!-- <li><a class="nav-link scrollto" href="./index.html#about">ABOUT</a></li> -->
-          <!-- <li><a class="nav-link scrollto" href="./index.html#services">Services</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="#about">ABOUT</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li> -->
           <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
-          <li><a href="./program.html">PROGRAM</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>FORUM</span> <i class="bi bi-chevron-down"></i></a>
+          <!-- <li><a href="./program.html">PROGRAM</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="#team">Speakers</a></li> -->
+          <li class="dropdown"><a href="#"><span>FORUM</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
+              <li><a href="./program.html">PROGRAM</a></li>
               <li><a href="./speakers.html">SPEAKERS</a></li>
-           
+              <li><a href="./sponsors-partners.html">SPONSORS</a></li>
+             
             </ul>
-          </li> -->
-        
+          </li>
           <li><a class="nav-link scrollto btn btn-primary text-white px-lg-4 px-2 py-2 mx-lg-0 mx-3" href="./sponsors.html" style="background-color: rgb(15, 59, 143);">EXHIBIT</a></li>
           <li><a class="btn btn-danger text-white px-lg-4 px-2 py-2 mx-lg-0 mx-3 mt-md-0 mt-3" href="./register.html">REGISTER TO ATTEND</a></li>
-
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -114,8 +115,7 @@
 
         <div class="section-title text-center w-75 mx-auto">
           <!-- <h2>Register</h2> -->
-          <h3 class="fs-4 ">Please register below to attend the forum. There is no charge for participants who are not exhibiting.</h3>
-          <!-- <p class="fw-light">Send us your details and we’ll show you options that best fit your goals.</p> -->
+          <h3 class="fs-4 ">Please register below to attend the forum. <br/>There is no charge for participants who are not exhibiting.</h3>
         </div>
 
         <!-- https://formspree.io/f/mgegvqka -->
@@ -124,7 +124,7 @@
           <div class="row">
             <div class="col-lg-4">
               <div class="d-flex flex-column">
-                <label for="" class="fw-bold">Prefix(Optional)</label>
+                <label for="" class="fw-bold">Prefix<span class="text-danger opacity-75">*</span></label>
                 <select name="prefix" id="prefix" class="form-control rounded-0 py-2 px-3 mt-2">
                     <option value="" class="disable">---Please select---</option>
                     <option value="Miss.">Miss.</option>
@@ -183,6 +183,17 @@
                     <option value="South America">South America</option>
                    
                    
+                  </select>
+              </div>
+            </div>
+             <div class="col-lg-6 mt-4">
+              <div class="d-flex flex-column">
+                <label for="" class="fw-bold">Gender<span class="text-danger opacity-75">*</span></label>
+                <select name="gender" id="gender" class="form-control rounded-0 py-2 px-3 mt-2">
+                    <option value="" class="disable">---Please select---</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+   
                   </select>
               </div>
             </div>
@@ -258,7 +269,12 @@
            
             <div class="d-flex justify-content-center">
 
-              <button type="button" id="submit" class="mx-auto text-white btn btn-primary rounded-0 px-5 py-3 w-lg-0" style="">REGISTER</button>
+              <button type="button" id="submit" class="mx-auto text-white btn btn-primary rounded-0 px-5 py-3 w-lg-0 d-flex justify-content-center align-items-center" style="">
+                <div class="spinner-border text-light mx-2 d-none" role="status" id="spinner">
+                  <span class="sr-only"></span>
+                </div>
+                REGISTER
+              </button>
             </div>
           </div>
           </div>
@@ -344,10 +360,10 @@
             <p>Follow us on social media</p>
             <div class="social-links mt-3">
               <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.facebook.com/carisca.supply.chain/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
               <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
               <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.linkedin.com/company/carisca" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
 

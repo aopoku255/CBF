@@ -14,8 +14,10 @@ const role = document.getElementById("role");
 const sector = document.getElementById("sector");
 const specify_sector = document.getElementById("specify_sector");
 const specify_role = document.getElementById("specify_role");
+const gender = document.getElementById("gender");
 // const comment = document.getElementById("comment");
 const submitBtn = document.getElementById("submit");
+const spinnerLd = document.getElementById("spinner");
 
 // ADD EVENT LISTENER
 
@@ -54,6 +56,7 @@ async function handleSubmit(e) {
   const country_value = country.value;
   const role_value = role.value;
   const sector_value = sector.value;
+  const gender_value = gender.value;
   // //   const comment_value = comment.value;
 
   if (
@@ -64,7 +67,8 @@ async function handleSubmit(e) {
     !organization_value ||
     !continent_value ||
     !country_value ||
-    !role_value
+    !role_value ||
+    !gender_value
   ) {
     errormsg.innerHTML = "Please enter all required fields";
 
@@ -73,6 +77,7 @@ async function handleSubmit(e) {
     }, 3000);
     return;
   } else {
+    spinnerLd.classList.remove("d-none");
     const response = await axios.post("http://localhost:3001/api/v1/register", {
       prefix: prefix_value,
       first_name: first_name_value,
@@ -84,9 +89,11 @@ async function handleSubmit(e) {
       country: country_value,
       role: role_value,
       sector: sector_value,
+      gender: gender_value,
     });
 
     if (response?.data?.status === "success") {
+      sessionStorage.setItem("response", response?.data?.data);
       window.location.href = "/thanks.html";
     } else {
       errormsg.innerHTML = response?.data?.data;
@@ -94,6 +101,7 @@ async function handleSubmit(e) {
         errormsg.innerHTML = "";
       }, 3000);
     }
+    spinnerLd.classList.add("d-none");
     // window.location.href = "/thanks.html";
   }
 }
